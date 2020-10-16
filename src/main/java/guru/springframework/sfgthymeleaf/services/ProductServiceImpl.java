@@ -1,8 +1,8 @@
-package guru.springframework.services;
+package guru.springframework.sfgthymeleaf.services;
 
-import guru.springframework.domain.Author;
-import guru.springframework.domain.Product;
-import guru.springframework.domain.ProductCategory;
+import guru.springframework.sfgthymeleaf.domain.Author;
+import guru.springframework.sfgthymeleaf.domain.Product;
+import guru.springframework.sfgthymeleaf.domain.ProductCategory;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

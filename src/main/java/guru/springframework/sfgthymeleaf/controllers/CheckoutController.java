@@ -1,0 +1,27 @@
+package guru.springframework.sfgthymeleaf.controllers;
+
+import guru.springframework.sfgthymeleaf.commands.CheckoutCommand;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class CheckoutController {
+
+    @RequestMapping("/checkout")
+    public String checkoutForm(Model model){
+        model.addAttribute("checkoutCommand", new CheckoutCommand());
+        return "checkoutform";
+    }
+
+    @PostMapping("/docheckout")
+    public String doCheckout(CheckoutCommand checkoutCommand, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) {
+            return "checkoutform";
+        }
+
+        return "checkoutcomplete";
+    }
+}

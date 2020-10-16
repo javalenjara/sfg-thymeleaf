@@ -1,6 +1,6 @@
-package guru.springframework.services;
+package guru.springframework.sfgthymeleaf.services;
 
-import guru.springframework.domain.Product;
+import guru.springframework.sfgthymeleaf.domain.Product;
 
 import java.util.List;
 

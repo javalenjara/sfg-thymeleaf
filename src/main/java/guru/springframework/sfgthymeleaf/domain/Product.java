@@ -1,4 +1,4 @@
-package guru.springframework.domain;
+package guru.springframework.sfgthymeleaf.domain;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
