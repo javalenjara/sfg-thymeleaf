@@ -7,6 +7,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
+
 @Controller
 public class CheckoutController {
 
@@ -17,7 +19,7 @@ public class CheckoutController {
     }
 
     @PostMapping("/docheckout")
-    public String doCheckout(CheckoutCommand checkoutCommand, BindingResult bindingResult){
+    public String doCheckout(@Valid CheckoutCommand checkoutCommand, BindingResult bindingResult){
         if (bindingResult.hasErrors()) {
             return "checkoutform";
         }
